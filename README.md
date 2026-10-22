@@ -1,6 +1,6 @@
 # Lume Browser
 
-A lightweight, modern browser built with **Tauri v2**, **SvelteKit** and **TypeScript**.  
+A lightweight, modern browser built with **Tauri v2**, **SvelteKit** and **TypeScript**.
 Much lighter than Electron — native WebView, tiny binary, fast startup.
 
 ## Features
@@ -30,23 +30,14 @@ sudo apt install libwebkit2gtk-4.1-dev libxdo-dev \
 ## Build
 
 ```bash
-# Install deps + start dev server
-make dev
-
-# Debug build
-make build
-
-# Optimised release
-make release
-
-# Linux AppImage / .deb / .rpm
-make linux
-
-# Windows .msi / .exe (requires cross-compilation target)
-make windows
-
-# Type-check
-make check
+make deps      # Install all dependencies
+make dev       # Hot-reload dev server
+make build     # Debug build
+make release   # Optimised release
+make linux     # Linux AppImage / .deb / .rpm
+make windows   # Windows .msi / .exe
+make check     # Type-check + Cargo check
+make clean     # Remove build artefacts
 ```
 
 Binaries land in `src-tauri/target/release/bundle/`.
@@ -68,9 +59,6 @@ lumebrowser/
 └── src-tauri/            # Rust backend
     └── src/lib.rs        — tab lifecycle, navigation, resize handler
 ```
-
-Each browser tab is a **Tauri child webview** (`WebviewBuilder`) positioned in the content area below the chrome.  
-The SvelteKit shell (chrome) communicates with Rust via `invoke()` commands and listens to events via `listen()`.
 
 ## License
 
