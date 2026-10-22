@@ -4,8 +4,6 @@ CARGO := cargo
 NPM   := npm
 TAURI := $(NPM) run tauri
 
-# ─── Targets ──────────────────────────────────────────────────────────────────
-
 help:
 	@echo "Lume Browser — Build System"
 	@echo ""
