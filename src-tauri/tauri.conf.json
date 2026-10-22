@@ -26,9 +26,7 @@
         "center": true
       }
     ],
-    "security": {
-      "csp": null
-    }
+    "security": { "csp": null }
   },
   "bundle": {
     "active": true,
@@ -40,18 +38,7 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ],
-    "linux": {
-      "deb": {
-        "depends": []
-      },
-      "rpm": {
-        "depends": []
-      }
-    },
-    "windows": {
-      "certificateThumbprint": null,
-      "digestAlgorithm": "sha256",
-      "timestampUrl": ""
-    }
+    "linux": { "deb": { "depends": [] }, "rpm": { "depends": [] } },
+    "windows": { "certificateThumbprint": null, "digestAlgorithm": "sha256", "timestampUrl": "" }
   }
 }
