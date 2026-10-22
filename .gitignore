@@ -1,0 +1,17 @@
+node_modules/
+build/
+.svelte-kit/
+dist/
+
+# Tauri
+src-tauri/target/
+src-tauri/WixTools/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
