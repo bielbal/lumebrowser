@@ -5,11 +5,8 @@
 
   onMount(() => {
     const unsubscribe = theme.subscribe(t => {
-      if (t === 'system') {
-        document.documentElement.removeAttribute('data-theme');
-      } else {
-        document.documentElement.setAttribute('data-theme', t);
-      }
+      if (t === 'system') document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.setAttribute('data-theme', t);
     });
     return unsubscribe;
   });
